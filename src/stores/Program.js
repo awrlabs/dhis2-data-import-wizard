@@ -604,7 +604,7 @@ class Program {
           let { trackedEntityInstances } = await api.get(
             "trackedEntityInstances.json",
             {
-              filter: `${this.uniqueAttribute}:IN:${ch.join(";")}`,
+              attribute: `${this.uniqueAttribute}:IN:${ch.join(";")}`,
               ouMode: "ALL",
               trackedEntityType: this.trackedEntityType.id,
               skipPaging: true,
