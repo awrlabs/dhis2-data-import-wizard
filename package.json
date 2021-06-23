@@ -36,7 +36,8 @@
     "react-select": "^3.0.4",
     "shortid": "^2.2.14",
     "source-map-explorer": "^2.1.0",
-    "xlsx": "^0.14.0"
+    "xlsx": "^0.14.0",
+    "babel-jest": "^24.8.0"
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
