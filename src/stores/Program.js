@@ -509,11 +509,11 @@ class Program {
         let foundEntities = [];
         try {
             if (this.uniqueIds.length > 0) {
-                const chunked = _.chunk(this.uniqueIds, 100);
+                const chunked = _.chunk(this.uniqueIds, 10);
                 for (const ch of chunked) {
                     let { rows } = await api.get('trackedEntityInstances/query.json', {
                         // program: this.id,
-                        filter: `${this.uniqueAttribute}:IN:${ch.join(';')}`,
+                        attributes: `${this.uniqueAttribute}:IN:${ch.join(';')}`,
                         ouMode: 'ALL'
                     });
                     if (rows.length > 0) {
